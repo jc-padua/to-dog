@@ -1,0 +1,92 @@
+:root {
+    --container: #fc8787;
+    --container-border: rgb(191, 94, 94);
+    --btn-primary: #febd5c;
+    --btn-shadow: #a97f41;
+    --task-list: #f6e3bf;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: #ffddc2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: none;
+}
+
+img {
+    width: 100%;
+}
+
+.dog-img {
+    border-radius: 100%;
+    width: 10rem;
+    margin-bottom: 2rem;
+}
+
+.todo-container {
+    border-radius: 15px;
+    padding: 2rem 5rem;
+    border: 1px solid var(--container-border);
+    box-shadow: -1px 4px 1px 1px var(--container-border);
+    background-color: var(--container);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--btn-primary);
+    color: #FFF;
+    box-shadow: 3px 3px 1px 1px var(--btn-shadow);
+}
+
+button:active {
+    box-shadow: 0px 0px 1px 1px var(--btn-shadow);
+}
+
+#task-list {
+    list-style-position: inside;
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+#task-list li {
+    background: var(--task-list);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    flex-grow: 1;
+    text-align: center;
+}
+
+li:hover {
+    scale: 1.1;
+}
