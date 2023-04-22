@@ -57,6 +57,8 @@ onValue(taskInDB, function (snapshot) {
 // Event Listeners
 
 addBtn.addEventListener('click', () => {
+    if (!taskField.value) return;
+
     let inputValue = taskField.value;
     push(taskInDB, inputValue);
     clearInputField();
